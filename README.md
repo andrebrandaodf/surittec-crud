@@ -1,9 +1,9 @@
 # Cadastro de clientes - Avaliação Surittec!
 
-* Java 11
-* [Spring Boot 2.3.4.RELEASE]https://start.spring.io/
+* Java 8
+* [Spring Boot 2.3.4.RELEASE](https://start.spring.io/)
 * Mysql Driver
-* [IDE SpringTools]https://spring.io/tools
+* [IDE SpringTools](https://spring.io/tools)
 * Lombok
 * Spring Web
 * Spring Data JPA
