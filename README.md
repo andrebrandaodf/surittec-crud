@@ -1,18 +1,18 @@
-#Cadastro de clientes - Avaliação Surittec!
+# Cadastro de clientes - Avaliação Surittec!
 
-*Java 11
-*[Spring Boot 2.3.4.RELEASE]https://start.spring.io/
-*Mysql Driver
-*[IDE SpringTools]https://spring.io/tools
-*Lombok
-*Spring Web
-*Spring Data JPA
-*Bean Validation
-*Maven 4.0.0
+* Java 11
+* [Spring Boot 2.3.4.RELEASE]https://start.spring.io/
+* Mysql Driver
+* [IDE SpringTools]https://spring.io/tools
+* Lombok
+* Spring Web
+* Spring Data JPA
+* Bean Validation
+* Maven 4.0.0
 
-#Métodos CRUD Cliente
+# Métodos CRUD Cliente
 
-"Adicionando Cliente" 
+**Adicionando Cliente**
 
 POST http://localhost:8080/clientes 
 
@@ -32,14 +32,12 @@ POST http://localhost:8080/clientes
 }
 ```
 
-"Para buscar cliente por id "
+**Para buscar cliente por id**
 
 GET http://localhost:8080/clientes/{id}
 
 
-
-
-"Para atualizar um cliente"
+**Para atualizar um cliente**
 
 PUT http://localhost:8080/clientes/{id}
 
@@ -63,7 +61,7 @@ PUT http://localhost:8080/clientes/{id}
 ```
 
 
-"Para deletar um cliente"
+**Para deletar um cliente**
 
 DELETE http://localhost:8080/delete/{id}
 
