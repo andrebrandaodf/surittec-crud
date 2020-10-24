@@ -1,5 +1,9 @@
 package com.surittec.crud.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +23,13 @@ public class ClienteController {
 	private ClienteService clienteService;
 	
 	@PostMapping("/clientes")
-	public Cliente addCliente(@RequestBody Cliente Cliente) {
+	public Cliente addCliente(@RequestBody @Valid Cliente Cliente) {
 		return clienteService.saveCliente(Cliente);
+	}
+	
+	@GetMapping("/clientes")
+	public List <Cliente> findAll() {
+		return clienteService.getClientes();
 	}
 	
 	@GetMapping("/clientes/{id}")

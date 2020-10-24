@@ -29,7 +29,7 @@ public class ClienteService {
 		return repository.findAll();
 	}
 
-	public Cliente getClienteById(Long id) {
+	public Cliente getClienteById(Long id) {		
 		return repository.findById(id).orElse(null);
 	}
 	

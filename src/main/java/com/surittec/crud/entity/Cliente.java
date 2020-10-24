@@ -31,15 +31,17 @@ public class Cliente implements Serializable{
 	private Long id;
 
 	@Size(min = 3, max = 100)
-	@NotNull(message = "Nome nao pode ser nulo")	
+	@NotNull(message = "Nome não pode ser nulo")
 	private String nome;
 	
-	@NotNull
+	@Size(min = 11, max = 14)
+	@NotNull(message = "Somente CPF válido")
 	private String cpf;
 	
 	@OneToOne(targetEntity= Endereco.class, fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	private Endereco endereco;
 	
+	@Size(max = 11)
 	@NotNull
 	private String telefone;
 	
