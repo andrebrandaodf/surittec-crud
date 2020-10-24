@@ -52,8 +52,12 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -64,13 +68,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-compiler-plugin</artifactId>
-			    <version>3.8.0</version>
-			    <configuration>
-				<source>1.8</source>  <!-- same as <java.version> -->
-				<target>1.8</target>    <!-- same as <java.version> -->
-			    </configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>  <!-- same as <java.version> -->
+					<target>1.8</target>    <!-- same as <java.version> -->
+				</configuration>
 			</plugin>
 
 		</plugins>
