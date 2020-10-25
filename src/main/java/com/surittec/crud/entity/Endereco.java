@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "endereco")
 public class Endereco implements Serializable{
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -44,7 +44,7 @@ public class Endereco implements Serializable{
 	private String bairro;
 	
 	@NotNull
-	private String cidade;
+	private String localidade;
 	
 	@Size(max = 2)
 	@NotNull
@@ -52,6 +52,14 @@ public class Endereco implements Serializable{
 	
 	@Size(max = 100)
 	private String complemento;
+	
+	private Integer ddd; 
+	
+	private String gia;
+	
+	private Integer ibge;
+   
+	private Integer siafi;
 	
 	@OneToOne(targetEntity=Cliente.class, fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn
@@ -82,11 +90,11 @@ public class Endereco implements Serializable{
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public String getCidade() {
-		return cidade;
+	public String getLocalidade() {
+		return localidade;
 	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setLocalidade(String localidade) {
+		this.localidade = localidade;
 	}
 	public String getUf() {
 		return uf;
@@ -99,6 +107,30 @@ public class Endereco implements Serializable{
 	}
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
+	}
+	public <Optional> Integer getDdd() {
+		return ddd;
+	}
+	public <Optional> void setDdd(Integer ddd) {
+		this.ddd = ddd;
+	}
+	public <Optional> String getGia() {
+		return gia;
+	}
+	public <Optional> void setGia(String gia) {
+		this.gia = gia;
+	}
+	public <Optional> Integer getIbge() {
+		return ibge;
+	}
+	public <Optional> void setIbge(Integer ibge) {
+		this.ibge = ibge;
+	}
+	public <Optional> Integer getSiafi() {
+		return siafi;
+	}
+	public <Optional> void setSiafi(Integer siafi) {
+		this.siafi = siafi;
 	}
 	
 	@Override
@@ -126,8 +158,14 @@ public class Endereco implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Endereco [id=" + id + ", cep=" + cep + ", logradouro=" + logradouro + ", bairro=" + bairro + ", cidade="
-				+ cidade + ", uf=" + uf + ", complemento=" + complemento + ", cliente=" + cliente + "]";
+		return "Endereco [id=" + id + ", "
+				+ "cep=" + cep + ", "
+						+ "logradouro=" + logradouro + 
+						", bairro=" + bairro
+				+ ", localidade=" + localidade +
+				", uf=" + uf + 
+				", complemento=" + complemento + 
+				", cliente=" + cliente
+				+ "]";
 	}	
-	
 }

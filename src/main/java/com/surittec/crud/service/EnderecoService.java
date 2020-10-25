@@ -40,7 +40,7 @@ public class EnderecoService {
 		existEndereco.setCep(endereco.getCep());
 		existEndereco.setLogradouro(endereco.getLogradouro());
 		existEndereco.setBairro(endereco.getBairro());
-		existEndereco.setCidade(endereco.getCidade());
+		existEndereco.setLocalidade(endereco.getLocalidade());
 		existEndereco.setUf(endereco.getUf());
 		existEndereco.setComplemento(endereco.getComplemento());
 		return repositoryEndereco.save(existEndereco);		
