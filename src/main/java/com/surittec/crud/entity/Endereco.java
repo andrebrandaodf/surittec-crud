@@ -108,28 +108,28 @@ public class Endereco implements Serializable{
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-	public <Optional> Integer getDdd() {
+	public Integer getDdd() {
 		return ddd;
 	}
-	public <Optional> void setDdd(Integer ddd) {
+	public void setDdd(Integer ddd) {
 		this.ddd = ddd;
 	}
-	public <Optional> String getGia() {
+	public String getGia() {
 		return gia;
 	}
-	public <Optional> void setGia(String gia) {
+	public void setGia(String gia) {
 		this.gia = gia;
 	}
-	public <Optional> Integer getIbge() {
+	public Integer getIbge() {
 		return ibge;
 	}
-	public <Optional> void setIbge(Integer ibge) {
+	public void setIbge(Integer ibge) {
 		this.ibge = ibge;
 	}
-	public <Optional> Integer getSiafi() {
+	public Integer getSiafi() {
 		return siafi;
 	}
-	public <Optional> void setSiafi(Integer siafi) {
+	public void setSiafi(Integer siafi) {
 		this.siafi = siafi;
 	}
 	
