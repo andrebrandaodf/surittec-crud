@@ -10,6 +10,11 @@
 * Bean Validation
 * Maven 4.0.0
 
+# Add-ons
+Este projeto foi criado para funcionar junto ao frontend 
+[surittec-crud-frontend](https://github.com/andrebrandaodf/surittec-crud-frontend).
+Informações sobre como rodar o projeto frontend se encontram [README.md](https://github.com/andrebrandaodf/surittec-crud-frontend/blob/main/README.md). 
+
 # Métodos CRUD Cliente
 
 **Adicionando Cliente**
