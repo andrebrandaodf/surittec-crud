@@ -18,17 +18,22 @@ POST http://localhost:8080/clientes
 
 ```
 {
-    "nome": "José Carvalho",
-    "cpf": "232.121.111-22",
-    "endereco": {
-        "cep": "72.120-000",
-        "logradouro": "Av. Brasil 707/907",
-        "bairro": "Tijuca",
-        "cidade": "Rio de Janeiro",
-        "uf": "RJ"
-    },
-    "telefone": "11 91512-9834",
-    "email": "jose@gmail.com"
+            "nome": "Heitor Macedo Varela",
+            "cpf": "213.142.143-12",
+            "endereco": {
+                "cep": "72.310-715",
+                "logradouro": "Quadra 504 conjunto 09",
+                "bairro": "Samambaia sul",
+                "localidade": "Brasília",
+                "uf": "DF",
+                "complemento": "casa 5",
+                "ddd":null,
+                "gia":"",
+                "ibge": null,
+                "siafi":""
+            },
+            "telefone": "61 98502-8544",
+            "email": "heitormacedo@gmail.com"
 }
 ```
 
@@ -43,20 +48,24 @@ PUT http://localhost:8080/clientes/{id}
 
 ```
 {
-    "id": 8,
-    "nome": "Luizão da Silva Carvalho",
-    "cpf": "232.111.111-22",
-    "endereco": {
-        "id": 6,
-        "cep": "72.000-000",
-        "logradouro": "Av. Brasil 707/907",
-        "bairro": "São Paulo",
-        "cidade": "São Paulo",
-        "uf": "SP",
-        "complemento": "casa 12"
-    },
-    "telefone": "11 94512-9834",
-    "email": "luizao@gmail.com"
+			"id": 23,
+            "nome": "Ronaldo Nazário do Nascimento",
+            "cpf": "251.142.143-12",
+            "endereco": {
+            	"id": 24,
+                "cep": "72.310-715",
+                "logradouro": "Quadra 504 conjunto 09",
+                "bairro": "Samambaia sul",
+                "localidade": "Brasília",
+                "uf": "DF",
+                "complemento": "casa 12",
+                "ddd":null,
+                "gia":"",
+                "ibge": null,
+                "siafi":""
+            },
+            "telefone": "61 98402-8544",
+            "email": "ronaldonazario@gmail.com"
 }
 ```
 
