@@ -53,7 +53,7 @@ PUT http://localhost:8080/clientes/{id}
 
 ```
 {
-			"id": 23,
+	    "id": 23,
             "nome": "Ronaldo Nazário do Nascimento",
             "cpf": "251.142.143-12",
             "endereco": {
@@ -74,10 +74,6 @@ PUT http://localhost:8080/clientes/{id}
 }
 ```
 
-
 **Para deletar um cliente**
 
 DELETE http://localhost:8080/delete/{id}
-
-
-
