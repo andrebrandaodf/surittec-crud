@@ -15,6 +15,16 @@ Este projeto foi criado para funcionar junto ao frontend
 [surittec-crud-frontend](https://github.com/andrebrandaodf/surittec-crud-frontend).
 Informações sobre como rodar o projeto frontend se encontram [README.md](https://github.com/andrebrandaodf/surittec-crud-frontend/blob/main/README.md). 
 
+# Executando projeto
+
+1. Entrar na pasta do projeto `surittec-crud` 
+
+	`cd surittec-crud`
+ 
+2. Executar o servidor spring 
+
+	`./mvnw spring-boot:run`
+
 # Métodos CRUD Cliente
 
 **Adicionando Cliente**
