@@ -33,7 +33,7 @@ public class Endereco implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Size(max = 8)
+	@Size(max = 10)
 	@NotNull
 	private String cep;
 

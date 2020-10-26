@@ -2,6 +2,8 @@ package com.surittec.crud.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,9 +39,10 @@ public class ClienteService {
 		return repository.findByNome(nome);
 	}
 
+	@Transactional
 	public Cliente updateCliente(Cliente cliente) {
 		Cliente existCliente = repository.findById(cliente.getId()).orElse(null);
-		
+	
 		existCliente.setNome(cliente.getNome());
 		existCliente.setCpf(cliente.getCpf());
 		existCliente.setTelefone(cliente.getTelefone());
@@ -48,6 +51,7 @@ public class ClienteService {
 		return repository.save(existCliente);		
 	}
 	
+	@Transactional
 	public String deleteCliente(Long id) {
 		repository.deleteById(id);
 		return "Cliente removido!" + id;

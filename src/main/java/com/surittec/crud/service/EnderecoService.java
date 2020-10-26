@@ -37,6 +37,7 @@ public class EnderecoService {
 
 	public Endereco updateEndereco(Endereco endereco) {
 		Endereco existEndereco = repositoryEndereco.findById(endereco.getId()).orElse(null);
+		
 		existEndereco.setCep(endereco.getCep());
 		existEndereco.setLogradouro(endereco.getLogradouro());
 		existEndereco.setBairro(endereco.getBairro());

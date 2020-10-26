@@ -41,7 +41,7 @@ public class Cliente implements Serializable{
 	@OneToOne(targetEntity= Endereco.class, fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	private Endereco endereco;
 	
-	@Size(max = 11)
+	@Size(max = 16)
 	@NotNull
 	private String telefone;
 	
