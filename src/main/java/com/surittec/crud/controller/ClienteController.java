@@ -31,8 +31,12 @@ public class ClienteController {
 	
 	@PostMapping("/clientes")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Cliente addCliente(@Valid @RequestBody Cliente Cliente) {
-		return clienteService.saveCliente(Cliente);
+	public Cliente addCliente(@Valid @RequestBody Cliente cliente) {
+		String cpf ="";
+		if (cliente.getCpf() != null) {
+		cliente.getCpfComMascara(cpf);
+		}
+		return clienteService.saveCliente(cliente);
 	}
 	
 	@GetMapping("/clientes")

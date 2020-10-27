@@ -14,6 +14,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,18 +36,18 @@ public class Cliente implements Serializable{
 	@NotNull(message = "Nome não pode ser nulo")
 	private String nome;
 	
-	@Size(min = 11, max = 14)
+	@CPF
 	@NotNull(message = "Somente CPF válido")
 	private String cpf;
 	
 	@OneToOne(targetEntity= Endereco.class, fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	private Endereco endereco;
 	
-	@Size(max = 16)
 	@NotNull
 	private String telefone;
 	
 	@Email(message = "Somente e-mail válido")
+	@NotNull
 	private String email;
 
 	public Long getId() {
@@ -94,6 +96,12 @@ public class Cliente implements Serializable{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	 
+	public String getCpfComMascara(String cpf) {
+		String cpfComMascara = "000.000.000-00"; 
+		cpf = cpfComMascara.replaceAll("[^\\D*]","");
+		return  cpf;
 	}
 	
 	@Override
